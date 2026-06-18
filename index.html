@@ -12,32 +12,37 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI;
+font-family:Arial,sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#060812;
+background:#050816;
 color:white;
-overflow-x:hidden;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-padding:20px 10%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 background:rgba(0,0,0,.85);
-backdrop-filter:blur(20px);
-z-index:999;
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo{
+color:#00eaff;
+font-size:28px;
+font-weight:900;
 }
 
 nav ul{
 display:flex;
-gap:25px;
 list-style:none;
+gap:24px;
 }
 
 nav a{
@@ -45,97 +50,128 @@ color:white;
 text-decoration:none;
 }
 
-.logo{
-font-size:28px;
-font-weight:800;
-color:#00e5ff;
+section{
+padding:110px 10%;
 }
 
 .hero{
-height:100vh;
+
+min-height:100vh;
+
 display:flex;
+
 flex-direction:column;
+
 justify-content:center;
-padding:0 10%;
+
 }
 
 .hero h1{
-font-size:70px;
+
+font-size:72px;
+
 }
 
 .hero span{
-color:#00e5ff;
+
+color:#00eaff;
+
 }
 
 .hero p{
-margin-top:20px;
+
+margin-top:25px;
+
 font-size:20px;
-max-width:700px;
+
+max-width:850px;
+
 line-height:1.8;
+
 }
 
 .btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 40px;
-background:#00e5ff;
-color:black;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-}
 
-section{
-padding:120px 10%;
+display:inline-block;
+
+margin-top:40px;
+
+padding:16px 40px;
+
+background:#00eaff;
+
+color:black;
+
+border-radius:50px;
+
+font-weight:bold;
+
+text-decoration:none;
+
 }
 
 .title{
-font-size:45px;
-margin-bottom:50px;
-color:#00e5ff;
+
+font-size:42px;
+
+color:#00eaff;
+
+margin-bottom:35px;
+
 }
 
 .grid{
+
 display:grid;
+
 grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+repeat(
+auto-fit,
+minmax(
+260px,
+1fr
+)
+);
+
+gap:22px;
+
 }
 
 .card{
 
-background:#10182f;
-padding:35px;
+background:#0e1728;
 
-border-radius:20px;
+padding:30px;
 
-transition:.4s;
+border-radius:18px;
+
+transition:.3s;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
 }
 
 .timeline{
 
-border-left:3px solid cyan;
+border-left:3px solid #00eaff;
 
-padding-left:25px;
+padding-left:30px;
 
 }
 
 .timeline div{
 
-margin-bottom:40px;
+margin-bottom:30px;
 
 }
 
 .progress{
 
-height:15px;
+height:14px;
 
 background:#333;
 
@@ -151,19 +187,12 @@ display:block;
 
 height:100%;
 
-background:#00e5ff;
+background:#00eaff;
 
 }
 
-footer{
-
-text-align:center;
-
-padding:40px;
-
-}
-
-input,textarea{
+.contact input,
+.contact textarea{
 
 width:100%;
 
@@ -173,33 +202,43 @@ margin-bottom:15px;
 
 border:none;
 
-border-radius:12px;
+border-radius:10px;
 
 }
 
 button{
 
-padding:16px 40px;
-
-background:#00e5ff;
+padding:15px 35px;
 
 border:none;
 
-font-weight:700;
+background:#00eaff;
 
-cursor:pointer;
+font-weight:800;
 
 }
 
-canvas{
+footer{
 
-position:fixed;
+padding:30px;
 
-top:0;
+text-align:center;
 
-left:0;
+}
 
-z-index:-1;
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
 
 }
 
@@ -209,23 +248,21 @@ z-index:-1;
 
 <body>
 
-<canvas id="bg"></canvas>
-
 <nav>
 
 <div class="logo">
+
 YVD
+
 </div>
 
 <ul>
 
 <li><a href="#about">About</a></li>
 
+<li><a href="#education">Education</a></li>
+
 <li><a href="#skills">Skills</a></li>
-
-<li><a href="#coretrion">CORETRION</a></li>
-
-<li><a href="#book">Book</a></li>
 
 <li><a href="#projects">Projects</a></li>
 
@@ -251,18 +288,23 @@ KAUSTHUBH
 
 <p>
 
-Semiconductor |
-VLSI |
-Processor Design |
-Innovation
+Electronics &
+Communication Engineering
 
-Building technology
-from
-Zero to Silicon.
+<br><br>
+
+VLSI • IoT • Embedded Systems
+
+Processor Design • Full Stack
+
+<br><br>
+
+Building scalable,
+innovative and impactful solutions.
 
 </p>
 
-<a class="btn" href="#projects">
+<a href="#about" class="btn">
 
 Explore
 
@@ -274,74 +316,25 @@ Explore
 
 <h2 class="title">
 
-About Me
+About
 
 </h2>
 
 <div class="card">
 
-I am passionate about semiconductor engineering,
-VLSI,
-processor architecture,
-and building impactful technology.
+Electronics and Communication Engineering student passionate about VLSI, IoT, Embedded Systems and Full-Stack Development.
 
-My mission is to simplify chip education and create innovative computing systems.
+Experienced in hardware-software co-design and building scalable systems.
 
 </div>
 
 </section>
 
-<section id="skills">
+<section id="education">
 
 <h2 class="title">
 
-Skills
-
-</h2>
-
-<div class="grid">
-
-<div class="card">
-RTL Design
-</div>
-
-<div class="card">
-Verilog
-</div>
-
-<div class="card">
-SystemVerilog
-</div>
-
-<div class="card">
-Digital Electronics
-</div>
-
-<div class="card">
-ASIC Flow
-</div>
-
-<div class="card">
-FPGA
-</div>
-
-<div class="card">
-IoT
-</div>
-
-<div class="card">
-Processor Design
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">
-
-Journey
+Education
 
 </h2>
 
@@ -351,13 +344,17 @@ Journey
 
 <h3>
 
-Start
+B.Tech
 
 </h3>
 
 <p>
 
-Learning semiconductor fundamentals
+Electronics & Communication Engineering
+
+<br>
+
+Vidya Jyothi Institute of Technology
 
 </p>
 
@@ -367,13 +364,13 @@ Learning semiconductor fundamentals
 
 <h3>
 
-VLSI
+Intermediate
 
 </h3>
 
 <p>
 
-Building knowledge from basics to advanced
+Narayana Junior College
 
 </p>
 
@@ -383,13 +380,13 @@ Building knowledge from basics to advanced
 
 <h3>
 
-Processor
+SSC
 
 </h3>
 
 <p>
 
-CORETRION™
+Sri Chaithanya School
 
 </p>
 
@@ -399,7 +396,32 @@ CORETRION™
 
 </section>
 
-<section id="coretrion">
+<section id="skills">
+
+<h2 class="title">
+
+Technical Skills
+
+</h2>
+
+<div class="grid">
+
+<div class="card">C</div>
+<div class="card">Python</div>
+<div class="card">JavaScript</div>
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">PostgreSQL</div>
+<div class="card">Verilog</div>
+<div class="card">Cadence Virtuoso</div>
+<div class="card">Embedded Systems</div>
+<div class="card">IoT</div>
+
+</div>
+
+</section>
+
+<section>
 
 <h2 class="title">
 
@@ -408,10 +430,6 @@ CORETRION™
 </h2>
 
 <div class="card">
-
-Advanced Processor Platform
-
-<br><br>
 
 RTL
 
@@ -455,26 +473,6 @@ PD
 
 </section>
 
-<section id="book">
-
-<h2 class="title">
-
-FROM ZERO TO SILICON
-
-</h2>
-
-<div class="card">
-
-Learn VLSI.
-
-Build Chips.
-
-Build Your Future.
-
-</div>
-
-</section>
-
 <section id="projects">
 
 <h2 class="title">
@@ -487,25 +485,37 @@ Projects
 
 <div class="card">
 
-Processor Architecture
+CORETRION™ Advanced Processor Core
 
 </div>
 
 <div class="card">
 
-Semiconductor Research
+Chipsetron IoT Controller
 
 </div>
 
 <div class="card">
 
-VLSI Learning Platform
+Smart Rover
 
 </div>
 
 <div class="card">
 
-Portfolio Development
+Smart Irrigation System
+
+</div>
+
+<div class="card">
+
+Portfolio Website
+
+</div>
+
+<div class="card">
+
+Student Management System
 
 </div>
 
@@ -517,7 +527,27 @@ Portfolio Development
 
 <h2 class="title">
 
-Articles
+Certifications
+
+</h2>
+
+<div class="grid">
+
+<div class="card">IoT</div>
+<div class="card">Python</div>
+<div class="card">Embedded Systems</div>
+<div class="card">VLSI</div>
+<div class="card">C Programming</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">
+
+Publications
 
 </h2>
 
@@ -525,19 +555,25 @@ Articles
 
 <div class="card">
 
-What is VLSI
+Voice Controlled Robot
 
 </div>
 
 <div class="card">
 
-Inside Processor Design
+Smart Rover
 
 </div>
 
 <div class="card">
 
-Future of Semiconductor
+IoT Revolution Book
+
+</div>
+
+<div class="card">
+
+Chipsetron Ultracore VX
 
 </div>
 
@@ -545,7 +581,35 @@ Future of Semiconductor
 
 </section>
 
-<section id="contact">
+<section>
+
+<h2 class="title">
+
+Awards
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+IoT Fusion Game Head
+
+</div>
+
+<div class="card">
+
+EduSkills Workshop
+
+</div>
+
+</div>
+
+</section>
+
+<section
+id="contact"
+class="contact">
 
 <h2 class="title">
 
@@ -557,7 +621,8 @@ Contact
 
 <input placeholder="Email">
 
-<textarea rows="8">
+<textarea rows="6"
+placeholder="Message">
 
 </textarea>
 
@@ -566,6 +631,15 @@ Contact
 Send
 
 </button>
+
+<br><br>
+
+Email:
+ykausthubh@gmail.com
+
+<br>
+
+Hyderabad
 
 </section>
 
@@ -577,101 +651,6 @@ YVD KAUSTHUBH
 
 </footer>
 
-<script>
-
-const c=
-document
-.getElementById("bg");
-
-const x=
-c.getContext("2d");
-
-function r(){
-
-c.width=
-innerWidth;
-
-c.height=
-innerHeight;
-
-}
-
-r();
-
-window.onresize=r;
-
-let p=[];
-
-for(
-let i=0;
-i<100;
-i++
-){
-
-p.push({
-
-x:
-Math.random()*innerWidth,
-
-y:
-Math.random()*innerHeight,
-
-v:
-Math.random()*2
-
-});
-
-}
-
-function a(){
-
-x.clearRect(
-0,
-0,
-c.width,
-c.height
-);
-
-x.fillStyle=
-"#00e5ff";
-
-p.forEach(
-s=>{
-
-x.beginPath();
-
-x.arc(
-s.x,
-s.y,
-2,
-0,
-7
-);
-
-x.fill();
-
-s.y+=s.v;
-
-if(
-s.y>
-innerHeight
-)
-
-s.y=0;
-
-}
-
-);
-
-requestAnimationFrame(
-a
-);
-
-}
-
-a();
-
-</script>
-
 </body>
+
 </html>
